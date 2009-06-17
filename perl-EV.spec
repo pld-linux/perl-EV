@@ -11,13 +11,11 @@ Version:	3.6
 Release:	1
 License:	unknown
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/EV/%{pdir}-%{version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	642062929539555da53d8731354d5cda
 URL:		http://search.cpan.org/dist/EV/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
-%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

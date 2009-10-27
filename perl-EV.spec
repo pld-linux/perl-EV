@@ -8,7 +8,7 @@ Summary:	EV - perl interface to libev, a high performance full-featured event lo
 Summary(pl.UTF-8):	EV - interfejs perlowy do libev
 Name:		perl-EV
 Version:	3.8
-Release:	1
+Release:	2
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
@@ -63,11 +63,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%dir %{perl_vendorarch}/EV
 %{perl_vendorarch}/EV/*.pm
 %{perl_vendorarch}/EV.pm
 %{perl_vendorarch}/EV/EVAPI.h
 %{perl_vendorarch}/EV/ev.h
+%dir %{perl_vendorarch}/auto/EV
 %{perl_vendorarch}/auto/EV/EV.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/EV/EV.so
-%dir %{perl_vendorarch}/auto/EV/
 %{_mandir}/man3/*

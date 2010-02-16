@@ -8,8 +8,9 @@ Summary:	EV - perl interface to libev, a high performance full-featured event lo
 Summary(pl.UTF-8):	EV - interfejs perlowy do libev
 Name:		perl-EV
 Version:	3.8
-Release:	2
-License:	unknown
+Release:	3
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	3ce46dd8b6e65103ab55eba3f84448ad
@@ -44,7 +45,7 @@ Moduł ten dostarcza intefejs do libev.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
+	INSTALLDIRS=vendor </dev/null
 %{__make} \
 	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"

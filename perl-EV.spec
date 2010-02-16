@@ -1,19 +1,19 @@
 #
 # Conditional build:
-%bcond_with	tests		# perform "make test"
+%bcond_without	tests		# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	EV
 Summary:	EV - perl interface to libev, a high performance full-featured event loop
 Summary(pl.UTF-8):	EV - interfejs perlowy do libev
 Name:		perl-EV
-Version:	3.8
+Version:	3.9
 Release:	3
 # same as perl, libev: BSD-like
 License:	GPL v1+ or Artistic, partially BSD-like
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	3ce46dd8b6e65103ab55eba3f84448ad
+# Source0-md5:	b46709463a575485eb40ca3309963ce3
 URL:		http://search.cpan.org/dist/EV/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13

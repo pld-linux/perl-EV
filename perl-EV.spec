@@ -9,8 +9,8 @@ Summary(pl.UTF-8):	EV - interfejs perlowy do libev
 Name:		perl-EV
 Version:	3.8
 Release:	3
-# same as perl
-License:	GPL v1+ or Artistic
+# same as perl, libev: BSD-like
+License:	GPL v1+ or Artistic, partially BSD-like
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	3ce46dd8b6e65103ab55eba3f84448ad
@@ -58,12 +58,15 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -d libev-doc
+mv -f libev/{Changes,LICENSE,README} libev-doc
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes README COPYING libev-doc
 %dir %{perl_vendorarch}/EV
 %{perl_vendorarch}/EV/*.pm
 %{perl_vendorarch}/EV.pm

@@ -15,6 +15,7 @@ Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	b46709463a575485eb40ca3309963ce3
 URL:		http://search.cpan.org/dist/EV/
+BuildRequires:	perl-common-sense
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

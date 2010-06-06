@@ -8,7 +8,7 @@ Summary:	EV - perl interface to libev, a high performance full-featured event lo
 Summary(pl.UTF-8):	EV - interfejs perlowy do libev
 Name:		perl-EV
 Version:	3.9
-Release:	4
+Release:	5
 Epoch:		1
 # same as perl, libev: BSD-like
 License:	GPL v1+ or Artistic, partially BSD-like

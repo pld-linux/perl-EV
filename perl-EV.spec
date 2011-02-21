@@ -5,16 +5,16 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	EV
 Summary:	EV - perl interface to libev, a high performance full-featured event loop
-Summary(pl.UTF-8):	EV - interfejs perlowy do libev
+Summary(pl.UTF-8):	EV - perlowy interfejs do libev - wydajnej pętli zdarzeń
 Name:		perl-EV
-Version:	3.9
-Release:	5
+Version:	4.03
+Release:	1
 Epoch:		1
 # same as perl, libev: BSD-like
-License:	GPL v1+ or Artistic, partially BSD-like
+License:	GPL v1+ or Artistic (perl module), BSD-like (embedded libev)
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	b46709463a575485eb40ca3309963ce3
+Source0:	http://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
+# Source0-md5:	33088705bc34bf66bccde50205c15e9f
 URL:		http://search.cpan.org/dist/EV/
 BuildRequires:	perl-common-sense
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -23,13 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This module provides an interface to libev
-(http://software.schmorp.de/pkg/libev.html). While the documentation
-below is comprehensive, one might also consult the documentation of
-libev itself (http://pod.tst.eu/http://cvs.schmorp.de/libev/ev.pod or
-perldoc EV::libev) for more subtle details on watcher semantics or
-some discussion on the available backends, or how to force a specific
-backend with LIBEV_FLAGS, or just about in any case because it has
-much more detailed information.
+(http://software.schmorp.de/pkg/libev.html).
 
 This module is very fast and scalable. It is actually so fast that you
 can use it through the AnyEvent module, stay portable to other event
@@ -37,10 +31,15 @@ loops (if you don't rely on any watcher types not available through
 it) and still be faster than with any other event loop currently
 supported in Perl.
 
-This module does not export any symbols.
-
 %description -l pl.UTF-8
-Moduł ten dostarcza intefejs do libev.
+Moduł ten dostarcza intefejs do libev
+(http://software.schmorp.de/pkg/libev.html).
+
+Jest bardzo szybki i skalowalny. Właściwie jest na tyle szybki, że
+można go użyć poprzez moduł AnyEvent i pozostawić kod przenośnym na
+inne pętle zdarzeń (jeśli nie jest wymagane użycie typów obserwatorów
+niedostępnych przez AnyEvent), i całość jest nadal szybsza niż inne
+pętle zdarzeń dostępne z poziomu Perla.
 
 %prep
 %setup -q -n %{pdir}-%{version}
@@ -68,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README COPYING libev-doc
+%doc Changes COPYING README libev-doc
 %dir %{perl_vendorarch}/EV
 %{perl_vendorarch}/EV/*.pm
 %{perl_vendorarch}/EV.pm
@@ -77,4 +76,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/EV
 %{perl_vendorarch}/auto/EV/EV.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/EV/EV.so
-%{_mandir}/man3/*
+%{_mandir}/man3/EV*.3pm*

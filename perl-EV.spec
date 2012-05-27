@@ -61,6 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d libev-doc
 mv -f libev/{Changes,LICENSE,README} libev-doc
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/EV/libev.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT

@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_without	tests		# perform "make test"
-#
+
+%define		pdir	EV
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	EV
-Summary:	EV - perl interface to libev, a high performance full-featured event loop
+Summary:	EV - Perl interface to libev, a high performance full-featured event loop
 Summary(pl.UTF-8):	EV - perlowy interfejs do libev - wydajnej pętli zdarzeń
 Name:		perl-EV
 Version:	4.18
 Release:	1
 Epoch:		1
-# same as perl, libev: BSD-like
-License:	GPL v1+ or Artistic (perl module), BSD-like (embedded libev)
+# same as Perl, libev: BSD-like
+License:	GPL v1+ or Artistic (Perl module), BSD-like (embedded libev)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	5931d0ba91f93b95723e80d573da606f
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This module provides an interface to libev
-(http://software.schmorp.de/pkg/libev.html).
+<http://software.schmorp.de/pkg/libev.html>.
 
 This module is very fast and scalable. It is actually so fast that you
 can use it through the AnyEvent module, stay portable to other event
@@ -33,7 +33,7 @@ supported in Perl.
 
 %description -l pl.UTF-8
 Moduł ten dostarcza intefejs do libev
-(http://software.schmorp.de/pkg/libev.html).
+<http://software.schmorp.de/pkg/libev.html>.
 
 Jest bardzo szybki i skalowalny. Właściwie jest na tyle szybki, że
 można go użyć poprzez moduł AnyEvent i pozostawić kod przenośnym na

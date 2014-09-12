@@ -75,6 +75,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/EV/EVAPI.h
 %{perl_vendorarch}/EV/ev.h
 %dir %{perl_vendorarch}/auto/EV
-%{perl_vendorarch}/auto/EV/EV.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/EV/EV.so
 %{_mandir}/man3/EV*.3pm*

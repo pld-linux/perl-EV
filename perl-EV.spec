@@ -3,7 +3,6 @@
 %bcond_without	tests		# perform "make test"
 
 %define		pdir	EV
-%include	/usr/lib/rpm/macros.perl
 Summary:	EV - Perl interface to libev, a high performance full-featured event loop
 Summary(pl.UTF-8):	EV - perlowy interfejs do libev - wydajnej pętli zdarzeń
 Name:		perl-EV

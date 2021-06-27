@@ -6,19 +6,22 @@
 Summary:	EV - Perl interface to libev, a high performance full-featured event loop
 Summary(pl.UTF-8):	EV - perlowy interfejs do libev - wydajnej pętli zdarzeń
 Name:		perl-EV
-Version:	4.27
-Release:	3
+Version:	4.33
+Release:	1
 Epoch:		1
 # same as Perl, libev: BSD-like
 License:	GPL v1+ or Artistic (Perl module), BSD-like (embedded libev)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	598ba9346a76107bba97a1caa815749c
-URL:		http://search.cpan.org/dist/EV/
+# Source0-md5:	b6d348e9306fd78dab0b80c55e9efb32
+URL:		https://metacpan.org/dist/EV
 BuildRequires:	perl-Canary-Stability
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
 BuildRequires:	perl-common-sense
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-devel >= 1:5.8.2
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
+Conflicts:	perl-AnyEvent < 5.29
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -d libev-doc
-mv -f libev/{Changes,LICENSE,README} libev-doc
+%{__mv} libev/{Changes,LICENSE,README} libev-doc
 %{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/EV/libev.pod
 
 %clean

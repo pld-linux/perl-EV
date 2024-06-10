@@ -1,19 +1,19 @@
 #
 # Conditional build:
-%bcond_without	tests		# perform "make test"
+%bcond_without	tests	# unit tests
 
 %define		pdir	EV
 Summary:	EV - Perl interface to libev, a high performance full-featured event loop
 Summary(pl.UTF-8):	EV - perlowy interfejs do libev - wydajnej pętli zdarzeń
 Name:		perl-EV
-Version:	4.33
-Release:	4
+Version:	4.34
+Release:	1
 Epoch:		1
 # same as Perl, libev: BSD-like
 License:	GPL v1+ or Artistic (Perl module), BSD-like (embedded libev)
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	b6d348e9306fd78dab0b80c55e9efb32
+Source0:	https://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
+# Source0-md5:	de739e773a995d8ad8602fa4f9f21ff2
 URL:		https://metacpan.org/dist/EV
 BuildRequires:	perl-Canary-Stability
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
@@ -79,4 +79,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/EV/ev.h
 %dir %{perl_vendorarch}/auto/EV
 %attr(755,root,root) %{perl_vendorarch}/auto/EV/EV.so
-%{_mandir}/man3/EV*.3pm*
+%{_mandir}/man3/EV.3pm*
+%{_mandir}/man3/EV::*.3pm*

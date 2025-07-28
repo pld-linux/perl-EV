@@ -14,6 +14,7 @@ License:	GPL v1+ or Artistic (Perl module), BSD-like (embedded libev)
 Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	de739e773a995d8ad8602fa4f9f21ff2
+Patch0:		typemap.patch
 URL:		https://metacpan.org/dist/EV
 BuildRequires:	perl-Canary-Stability
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
@@ -46,6 +47,7 @@ pętle zdarzeń dostępne z poziomu Perla.
 
 %prep
 %setup -q -n %{pdir}-%{version}
+%patch -P0 -p0
 
 %build
 %{__perl} Makefile.PL \

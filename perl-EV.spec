@@ -6,14 +6,14 @@
 Summary:	EV - Perl interface to libev, a high performance full-featured event loop
 Summary(pl.UTF-8):	EV - perlowy interfejs do libev - wydajnej pętli zdarzeń
 Name:		perl-EV
-Version:	4.36
+Version:	4.37
 Release:	1
 Epoch:		1
 # same as Perl, libev: BSD-like
 License:	GPL v1+ or Artistic (Perl module), BSD-like (embedded libev)
 Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	fab37571524ae2acd87e34c55cabf136
+# Source0-md5:	b8aac02fc443b026732753ae2af1ef6d
 URL:		https://metacpan.org/dist/EV
 BuildRequires:	perl-Canary-Stability
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
